@@ -1,11 +1,10 @@
 /* 
-    ২. prompt দিয়ে ইউজারের কাছ থেকে একটা সংখ্যা নাও। 
-    সেটার সাথে ২০০যোগ করো। যোগ করতে গেলে parse করা লাগলে সেটা করো। 
-    তারপর সেই রেজাল্টকে alert দিয়ে আউটপুট দেখাও 
+    ৩. ব্রাউজারে একটা confirm করে জিজ্ঞেস করো তুমি কি তোমার ওয়েবসাইট এর লোকেশন দেখতে চাও। যদি বলে দেখতে চাই তাহলে সেই ওয়েবসাইট এর লোকেশন এর href জিনিসটা কনসোল লগ করে দেখাও 
 */
-console.log("hi");
-const userNumber = prompt("Enter a number");
-console.log(userNumber);
-const intNumber = parseInt(userNumber);
-const add200 = intNumber + 200;
-alert(add200);
+const userReaction = confirm("Do you want to see your location?");
+console.log(userReaction);
+if (userReaction) {
+  console.log("yes");
+  console.log("তোমার ওয়েবসাইট এর লোকেশন দেখতে চাও", window.location.href);
+  document.getElementById("location").innerText = window.location.href;
+}
